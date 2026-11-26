@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import pandas as pd
 import requests
 import streamlit as st
-
+st.set_page_config(page_title="Binance Futures Early Pump Scanner", page_icon="📈", layout="wide")
 # Official USDⓈ-M Futures REST API base URL. If your hosting provider is
 # blocked (HTTP 451), deploy from a network/region permitted by Binance.
 BASE = os.getenv("BINANCE_FUTURES_BASE_URL", "https://fapi.binance.com").rstrip("/")
@@ -17,7 +17,6 @@ TIMEOUT = (5, 20)  # connect timeout, read timeout
 MAX_WORKERS = 4   # deliberately conservative to reduce rate-limit pressure
 _thread_local = threading.local()
 
-st.set_page_config(page_title="Binance Futures Early Pump Scanner", page_icon="📈", layout="wide")
 
 
 def get_session():
