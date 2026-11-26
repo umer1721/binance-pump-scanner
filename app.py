@@ -321,7 +321,7 @@ st.caption("1H Swing • USDT-margined perpetuals • Public market data • LON
 
 with st.sidebar:
     st.header("Scanner Settings")
-    scan_limit = st.slider("Deep-scan most liquid symbols", 20, 120, 60, 10)
+    scan_limit = st.slider("Deep-scan most liquid symbols", 20, 120, 60, 10, key="deep_scan_1")
     min_quote_volume = st.number_input("Minimum 24H quote volume (USDT)", min_value=0, value=2_000_000, step=500_000)
     min_score = st.slider("Minimum score shown", 0, 100, 50, 5)
     st.divider()
@@ -582,7 +582,7 @@ st.caption("1H Swing • All USDT Perpetuals • Public market data • LONG can
 
 with st.sidebar:
     st.header("Scanner Settings")
-    scan_limit = st.slider("Deep-scan most liquid symbols", 20, 120, 60, 10)
+    scan_limit = st.slider("Deep-scan most liquid symbols", 20, 120, 60, 10, key="deep_scan_2")
     min_quote_vol = st.number_input("Minimum 24H quote volume (USDT)", min_value=0, value=2_000_000, step=500_000)
     min_score = st.slider("Minimum score shown", 0, 100, 50, 5)
     auto_refresh = st.checkbox("Auto-refresh every 5 minutes", value=False)
