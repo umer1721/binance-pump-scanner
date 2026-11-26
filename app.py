@@ -426,7 +426,7 @@ TIMEOUT = 12
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "EarlyPumpScanner/1.0"})
 
-st.set_page_config(page_title="Binance Early Pump Scanner", page_icon="📈", layout="wide")
+
 
 def api_get(path, params=None):
     r = SESSION.get(BASE + path, params=params or {}, timeout=TIMEOUT)
